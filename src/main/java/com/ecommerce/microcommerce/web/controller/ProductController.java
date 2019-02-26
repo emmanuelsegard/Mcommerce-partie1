@@ -1,8 +1,6 @@
 package com.ecommerce.microcommerce.web.controller;
 
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -25,7 +23,6 @@ import com.ecommerce.microcommerce.dao.ProductDao;
 import com.ecommerce.microcommerce.model.Product;
 import com.ecommerce.microcommerce.web.exceptions.ProduitIntrouvableException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
@@ -133,4 +130,8 @@ public class ProductController {
     	return marges;
     }
 
+    @GetMapping(value = "/AlphaProduits")
+    public List<Product> trierProduitsParOrdreAlphabetique() {
+    	return productDao.findAllByOrderByNomAsc();
+    }
 }
