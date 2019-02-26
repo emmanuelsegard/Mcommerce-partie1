@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "19400cac-98c2-4b2e-9f13-d58ad3bb68e3",
+		"name": "Mcommerce-partie1",
+		"description": "Mcommerce-partie1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/AdminProduits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/AdminProduits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AdminProduits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/AlphaProduits\n",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9090/AlphaProduits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AlphaProduits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/Produits/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 4,\n\t\"nom\": \"OBERHEIM\",\n\t\"prix\": 0,\n\t\"prixAchat\": 3000\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits",
+						""
+					]
+				},
+				"description": "Ajoute un produit."
+			},
+			"response": [
+				{
+					"name": "http://localhost:9090/Produits/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\tid: \"1\",\n\tnom: \"synth\",\n\tprix: \"5000\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/Produits/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"Produits",
+								""
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Feb 2019 17:24:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2019-02-13T17:24:08.491+0000\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"message\": \"Missing URI template variable 'product' for method parameter of type Product\",\n    \"path\": \"/Produits/\"\n}"
+				},
+				{
+					"name": "http://localhost:9090/Produits/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\tid: 1,\n\tnom: \"synth\",\n\tprix: 5000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/Produits/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"Produits",
+								""
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Feb 2019 17:24:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2019-02-13T17:24:08.491+0000\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"message\": \"Missing URI template variable 'product' for method parameter of type Product\",\n    \"path\": \"/Produits/\"\n}"
+				},
+				{
+					"name": "http://localhost:9090/Produits/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\nproduct:\n{\n\tid: \"1\",\n\tnom: \"synth\",\n\tprix: \"5000\"\n}\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9090/Produits/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"Produits",
+								""
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Feb 2019 17:25:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2019-02-13T17:25:34.343+0000\",\n    \"status\": 500,\n    \"error\": \"Internal Server Error\",\n    \"message\": \"Missing URI template variable 'product' for method parameter of type Product\",\n    \"path\": \"/Produits/\"\n}"
+				},
+				{
+					"name": "http://localhost:9090/Produits/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 5,\n\t\"nom\": \"synth\",\n\t\"prix\": 5000\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:9090/Produits/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"Produits",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Feb 2019 17:29:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2019-02-13T17:29:32.542+0000\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"message\": \"JSON parse error: Unexpected character ('i' (code 105)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('i' (code 105)): was expecting double-quote to start field name\\n at [Source: (PushbackInputStream); line: 2, column: 3]\",\n    \"path\": \"/Produits/\"\n}"
+				},
+				{
+					"name": "http://localhost:9090/Produits/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nom\": \"EP\",\n\t\"prix\": 4000,\n\t\"prixAchat\": 2000\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:9090/Produits/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"Produits",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Location",
+							"value": "http://localhost:9090/Produits/6"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 18 Feb 2019 14:42:33 GMT"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "http://localhost:9090/Produits/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "nom",
+									"value": "Synthétiseur",
+									"type": "text"
+								},
+								{
+									"key": "prix",
+									"value": "5000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9090/Produits/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"Produits",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Feb 2019 16:29:14 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "Ajoute un produit"
+				},
+				{
+					"name": "http://localhost:9090/Produits/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 4,\n\t\"nom\": \"OBERHEIM\",\n\t\"prix\": 0,\n\t\"prixAchat\": 3000\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:9090/Produits/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"Produits",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Feb 2019 11:08:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": 1551179326386,\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"exception\": \"org.springframework.web.bind.MethodArgumentNotValidException\",\n    \"errors\": [\n        {\n            \"codes\": [\n                \"Min.product.prix\",\n                \"Min.prix\",\n                \"Min.int\",\n                \"Min\"\n            ],\n            \"arguments\": [\n                {\n                    \"codes\": [\n                        \"product.prix\",\n                        \"prix\"\n                    ],\n                    \"arguments\": null,\n                    \"defaultMessage\": \"prix\",\n                    \"code\": \"prix\"\n                },\n                1\n            ],\n            \"defaultMessage\": \"must be greater than or equal to 1\",\n            \"objectName\": \"product\",\n            \"field\": \"prix\",\n            \"rejectedValue\": 0,\n            \"bindingFailure\": false,\n            \"code\": \"Min\"\n        }\n    ],\n    \"message\": \"Validation failed for object='product'. Error count: 1\",\n    \"path\": \"/Produits/\"\n}"
+				}
+			]
+		}
+	]
+}
