@@ -21,6 +21,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ecommerce.microcommerce.dao.ProductDao;
 import com.ecommerce.microcommerce.model.Product;
+import com.ecommerce.microcommerce.web.exceptions.ProduitGratuitException;
 import com.ecommerce.microcommerce.web.exceptions.ProduitIntrouvableException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -82,6 +83,9 @@ public class ProductController {
 
     public ResponseEntity<Void> ajouterProduit(@Valid @RequestBody Product product) {
 
+        if (product.getPrix() == 0) throw new ProduitGratuitException(
+        		"Il est impossible d'ajouter des produits gratuits en base !");
+        
         Product productAdded =  productDao.save(product);
 
         if (productAdded == null)
